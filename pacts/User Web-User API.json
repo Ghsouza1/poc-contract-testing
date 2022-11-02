@@ -1,0 +1,57 @@
+{
+  "consumer": {
+    "name": "User Web"
+  },
+  "interactions": [
+    {
+      "description": "a request to get a planet",
+      "providerStates": [
+        {
+          "name": "a planet with ID 3 exists"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/planets/3"
+      },
+      "response": {
+        "body": {
+          "id": 3,
+          "name": "Yavin IV"
+        },
+        "headers": {
+          "content-type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "10.1.4"
+    },
+    "pactRust": {
+      "ffi": "0.3.12",
+      "models": "0.4.5"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "User API"
+  }
+}

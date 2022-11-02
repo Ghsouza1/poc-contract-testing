@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowJs": true,
+    "types": ["node", "jest"],
+    "module": "CommonJS",
+    "noLib": false,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "outDir": "test",
+    "noEmitOnError": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "lib": ["es2016", "dom", "esnext.asynciterable"]
+  },
+  "include": ["src", "test/**/*", "**/*.spec.ts"],
+  "exclude": ["./node_modules/**"]
+}
